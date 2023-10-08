@@ -1,8 +1,6 @@
 const { searching } = require('../dist/index');
 const { add } = require('../dist/index');
 
-//const { mult } = require('../src/sum');
-
 test('buscar posicion en el array', () => {
     expect(searching('poner la lavadora')).toBe(0);
   });
