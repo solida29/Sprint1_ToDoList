@@ -1,0 +1,9 @@
+name: CI/CD ToDolist
+
+on: push
+env:
+  NODE_VERSION: "18.18"
+jobs:
+  test:
+    name: todolist.test.js
+    runs-on: jest
