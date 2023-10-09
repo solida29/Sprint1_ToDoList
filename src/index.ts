@@ -41,8 +41,6 @@ function searchingTask(newTask: string) : number {
 
 // Agregar tareas
 function addTask(newTask: string) {
-    //const prompt = require('prompt-sync')();
-    //let newTask  = (prompt("Put the new task please").toLowerCase());
     let taskIndex = searchingTask(newTask.toLowerCase());
 
     if (taskIndex === -1) {
@@ -62,26 +60,21 @@ function addTask(newTask: string) {
 
 // Borrar tareas
 function deleteTask(oldTask: string) {
-    //const prompt = require('prompt-sync')();
-    //let oldTask = prompt("Which task do you want to delete please?").toLowerCase();
     let taskIndex = searchingTask(oldTask);
 
     console.log("task index: " + taskIndex);
 
     if (taskIndex >= 0) {
         taskList.splice(taskIndex, 1);
-        console.log("Task deleted");
+        return "Task deleted";
 
     } else {
-        console.log("Sorry, this task doesn't exists");
+        return "Sorry, this task doesn't exists";
     }
-    console.table(taskList);
 }
 
 // Completar tareas
 function completedTask(oldTask: string) {
-    //const prompt = require('prompt-sync')();
-    //let oldTask = prompt("Which task do you want to complete please?");
     let taskIndex = searchingTask(oldTask);
 
     console.log("task index: " + taskIndex);
@@ -104,9 +97,10 @@ function printTask() {
     for (let i: number = 0; i < taskList.length; i++) {
         show += (i + 1) + ". " + taskList[i].task + "\n";
     }
-    console.log(show);
+    return show;
 }
 
 exports.searching = searchingTask;
 exports.add = addTask;
 exports.list = taskList;
+exports.deleteT = deleteTask;
