@@ -1,12 +1,12 @@
 import { ChildProcessWithoutNullStreams } from "child_process";
 
 // Array de objetos de las tareas
-interface Task {
+interface ITask {
     task: string, 
     completed: boolean 
 }
 
-const taskList: Task[] = [
+const taskList: ITask[] = [
     {
         task: "poner la lavadora",
         completed: false
@@ -106,3 +106,7 @@ function printTask() {
     }
     console.log(show);
 }
+
+exports.searching = searchingTask;
+exports.add = addTask;
+exports.list = taskList;

@@ -28,9 +28,7 @@ function searchingTask(newTask) {
     }
     return index;
 }
-function addTask() {
-    const prompt = require('prompt-sync')();
-    let newTask = (prompt("Put the new task please").toLowerCase());
+function addTask(newTask) {
     let taskIndex = searchingTask(newTask.toLowerCase());
     if (taskIndex === -1) {
         const addNewTask = {
@@ -38,16 +36,14 @@ function addTask() {
             completed: false
         };
         taskList.push(addNewTask);
-        console.log("Task added successfully");
+        return "Task added successfully";
     }
     else {
-        console.log("Sorry but this task exists");
+        return "Sorry but this task exists";
     }
     console.table(taskList);
 }
-function deleteTask() {
-    const prompt = require('prompt-sync')();
-    let oldTask = prompt("Which task do you want to delete please?").toLowerCase();
+function deleteTask(oldTask) {
     let taskIndex = searchingTask(oldTask);
     console.log("task index: " + taskIndex);
     if (taskIndex >= 0) {
@@ -59,9 +55,7 @@ function deleteTask() {
     }
     console.table(taskList);
 }
-function completedTask() {
-    const prompt = require('prompt-sync')();
-    let oldTask = prompt("Which task do you want to complete please?");
+function completedTask(oldTask) {
     let taskIndex = searchingTask(oldTask);
     console.log("task index: " + taskIndex);
     if (taskIndex >= 0 && !taskList[taskIndex].completed) {
@@ -81,7 +75,7 @@ function printTask() {
     }
     console.log(show);
 }
-//# sourceMappingURL=index.js.map
-
 exports.searching = searchingTask;
 exports.add = addTask;
+exports.list = taskList;
+//# sourceMappingURL=index.js.map
