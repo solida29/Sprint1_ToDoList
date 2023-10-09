@@ -40,9 +40,9 @@ function searchingTask(newTask: string) : number {
 }
 
 // Agregar tareas
-function addTask() {
-    const prompt = require('prompt-sync')();
-    let newTask  = (prompt("Put the new task please").toLowerCase());
+function addTask(newTask: string) {
+    //const prompt = require('prompt-sync')();
+    //let newTask  = (prompt("Put the new task please").toLowerCase());
     let taskIndex = searchingTask(newTask.toLowerCase());
 
     if (taskIndex === -1) {
@@ -53,17 +53,17 @@ function addTask() {
             }
         
         taskList.push(addNewTask);
-        console.log("Task added successfully");
+        return "Task added successfully";
     } else {
-        console.log("Sorry but this task exists");
+        return "Sorry but this task exists";
     }
     console.table(taskList);
 }
 
 // Borrar tareas
-function deleteTask() {
-    const prompt = require('prompt-sync')();
-    let oldTask = prompt("Which task do you want to delete please?").toLowerCase();
+function deleteTask(oldTask: string) {
+    //const prompt = require('prompt-sync')();
+    //let oldTask = prompt("Which task do you want to delete please?").toLowerCase();
     let taskIndex = searchingTask(oldTask);
 
     console.log("task index: " + taskIndex);
@@ -79,9 +79,9 @@ function deleteTask() {
 }
 
 // Completar tareas
-function completedTask() {
-    const prompt = require('prompt-sync')();
-    let oldTask = prompt("Which task do you want to complete please?");
+function completedTask(oldTask: string) {
+    //const prompt = require('prompt-sync')();
+    //let oldTask = prompt("Which task do you want to complete please?");
     let taskIndex = searchingTask(oldTask);
 
     console.log("task index: " + taskIndex);
