@@ -48,12 +48,11 @@ function deleteTask(oldTask) {
     console.log("task index: " + taskIndex);
     if (taskIndex >= 0) {
         taskList.splice(taskIndex, 1);
-        console.log("Task deleted");
+        return "Task deleted";
     }
     else {
-        console.log("Sorry, this task doesn't exists");
+        return "Sorry, this task doesn't exists";
     }
-    console.table(taskList);
 }
 function completedTask(oldTask) {
     let taskIndex = searchingTask(oldTask);
@@ -73,9 +72,10 @@ function printTask() {
     for (let i = 0; i < taskList.length; i++) {
         show += (i + 1) + ". " + taskList[i].task + "\n";
     }
-    console.log(show);
+    return show;
 }
 exports.searching = searchingTask;
 exports.add = addTask;
 exports.list = taskList;
+exports.deleteT = deleteTask;
 //# sourceMappingURL=index.js.map
