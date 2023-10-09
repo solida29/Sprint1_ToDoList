@@ -71,6 +71,8 @@ function deleteTask(oldTask: string) {
     } else {
         return "Sorry, this task doesn't exists";
     }
+    console.table(taskList);
+
 }
 
 // Completar tareas
@@ -82,10 +84,10 @@ function completedTask(oldTask: string) {
     if (taskIndex >= 0 && !taskList[taskIndex].completed) {
         taskList[taskIndex].task += ": done";
         taskList[taskIndex].completed = true;
-        console.log("Task completed");
+        return "Task completed";
 
     } else {
-        console.log("Sorry, this task doesn't exists or is completed");
+        return "Sorry, this task doesn't exists or is completed";
     }
     console.table(taskList);
 }
@@ -104,3 +106,4 @@ exports.searching = searchingTask;
 exports.add = addTask;
 exports.list = taskList;
 exports.deleteT = deleteTask;
+exports.completedT = completedTask;

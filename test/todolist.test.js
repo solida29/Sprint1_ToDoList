@@ -2,6 +2,7 @@ const { searching } = require('../dist/index');
 const { add } = require('../dist/index');
 const { list } = require('../dist/index');
 const { deleteT } = require('../dist/index');
+const { completedT } = require('../dist/index');
 
 
 test('buscar posicion en el array', () => {
@@ -21,3 +22,18 @@ test('eliminar tarea', () => {
   expect(deleteT('poner la lavadora')).toBe('Task deleted');
 });
 
+test('eliminar tarea', () => {
+  expect(deleteT('saltar en paracaidas')).toBe("Sorry, this task doesn't exists");
+});
+
+test('completar tarea', () => {
+  expect(completedT('preparar la cena')).toBe("Task completed");
+});
+
+test('completar tarea', () => {
+  expect(completedT('escuchar musica')).toBe("Sorry, this task doesn't exists or is completed");
+});
+
+test('completar tarea', () => {
+  expect(completedT('preparar la cena')).toBe("Sorry, this task doesn't exists or is completed");
+});

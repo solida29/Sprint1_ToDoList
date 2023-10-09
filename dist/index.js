@@ -53,6 +53,7 @@ function deleteTask(oldTask) {
     else {
         return "Sorry, this task doesn't exists";
     }
+    console.table(taskList);
 }
 function completedTask(oldTask) {
     let taskIndex = searchingTask(oldTask);
@@ -60,10 +61,10 @@ function completedTask(oldTask) {
     if (taskIndex >= 0 && !taskList[taskIndex].completed) {
         taskList[taskIndex].task += ": done";
         taskList[taskIndex].completed = true;
-        console.log("Task completed");
+        return "Task completed";
     }
     else {
-        console.log("Sorry, this task doesn't exists or is completed");
+        return "Sorry, this task doesn't exists or is completed";
     }
     console.table(taskList);
 }
@@ -78,4 +79,5 @@ exports.searching = searchingTask;
 exports.add = addTask;
 exports.list = taskList;
 exports.deleteT = deleteTask;
+exports.completedT = completedTask;
 //# sourceMappingURL=index.js.map
