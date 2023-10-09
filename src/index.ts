@@ -40,10 +40,10 @@ function searchingTask(newTask: string) : number {
 }
 
 // Agregar tareas
-function addTask(): void {
+function addTask() {
     const prompt = require('prompt-sync')();
-    let newTask: string  = (prompt("Put the new task please").toLowerCase());
-    let taskIndex: number = searchingTask(newTask.toLowerCase());
+    let newTask  = (prompt("Put the new task please").toLowerCase());
+    let taskIndex = searchingTask(newTask.toLowerCase());
 
     if (taskIndex === -1) {
         const addNewTask: {task: string, completed: boolean} = 
@@ -61,10 +61,10 @@ function addTask(): void {
 }
 
 // Borrar tareas
-function deleteTask() : void {
+function deleteTask() {
     const prompt = require('prompt-sync')();
-    let oldTask: string = prompt("Which task do you want to delete please?").toLowerCase();
-    let taskIndex: number = searchingTask(oldTask);
+    let oldTask = prompt("Which task do you want to delete please?").toLowerCase();
+    let taskIndex = searchingTask(oldTask);
 
     console.log("task index: " + taskIndex);
 
@@ -79,10 +79,10 @@ function deleteTask() : void {
 }
 
 // Completar tareas
-function completedTask() : void {
+function completedTask() {
     const prompt = require('prompt-sync')();
     let oldTask = prompt("Which task do you want to complete please?");
-    let taskIndex: number = searchingTask(oldTask);
+    let taskIndex = searchingTask(oldTask);
 
     console.log("task index: " + taskIndex);
 
@@ -99,7 +99,7 @@ function completedTask() : void {
 
 // Imprimir tareas
 function printTask() {
-    let show: string = "";
+    let show = "";
 
     for (let i: number = 0; i < taskList.length; i++) {
         show += (i + 1) + ". " + taskList[i].task + "\n";
