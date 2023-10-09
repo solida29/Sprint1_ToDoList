@@ -7,3 +7,5 @@ jobs:
   test:
     name: todolist.test.js
     runs-on: jest
+    run:
+      npm run test
