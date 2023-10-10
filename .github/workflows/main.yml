@@ -1,9 +1,16 @@
 name: CI/CD ToDolist
 
-on: push
+on: 
+  push:
+    branches:
+      - main
 env:
   NODE_VERSION: "18.18"
+
 jobs:
-  test:
-    name: todolist.test.js
-    runs-on: jest
+  Todolist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo the message
+        run: echo "Hola"
+    
