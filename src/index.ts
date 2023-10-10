@@ -93,15 +93,14 @@ function completedTask(oldTask: string) {
 }
 
 // Imprimir tareas
-function printTask() {
+function printTask(taskList: ITask[]) {
     let show = "";
-    //show = JSON.stringify(taskList.task);
-
-    //const {task, completed} = taskList;
-    //console.log(task);
 
     for (let i: number = 0; i < taskList.length; i++) {
-        show +=  taskList[i].task + "\n";
+        const {task} = taskList[i];
+        show += task + "\n";
+
+        console.log(show);
     }
     return show;
 }

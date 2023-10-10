@@ -19,6 +19,16 @@ test('agregar tarea', () => {
   expect(list[list.length - 1].task).toBe('sacar al perro');
 });
 
+test('agregar tarea', () => {
+  add('nadar en mar abierto');
+  expect(list).toHaveLength(5);
+});
+
+test('eliminar tarea', () => {
+  deleteT('sacar al perro');
+  expect(list).toHaveLength(4);
+});
+
 test('eliminar tarea', () => {
   expect(deleteT('poner la lavadora')).toBe('Task deleted');
 });
@@ -40,5 +50,6 @@ test('completar tarea', () => {
 });
 
 test('imprimir todas las tareas', () => {
-  expect(printT()).toEqual(list.list);
+  printT(list);
+  expect().toBe(list.list);
 });

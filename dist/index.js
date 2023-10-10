@@ -68,10 +68,11 @@ function completedTask(oldTask) {
     }
     console.table(taskList);
 }
-function printTask() {
+function printTask(taskList) {
     let show = "";
     for (let i = 0; i < taskList.length; i++) {
-        show += taskList[i].task + "\n";
+        const { task } = taskList[i];
+        show += task + "\n";
     }
     return show;
 }
