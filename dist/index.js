@@ -71,7 +71,7 @@ function completedTask(oldTask) {
 function printTask() {
     let show = "";
     for (let i = 0; i < taskList.length; i++) {
-        show += (i + 1) + ". " + taskList[i].task + "\n";
+        show += taskList[i].task + "\n";
     }
     return show;
 }
@@ -80,4 +80,5 @@ exports.add = addTask;
 exports.list = taskList;
 exports.deleteT = deleteTask;
 exports.completedT = completedTask;
+exports.printT = printTask;
 //# sourceMappingURL=index.js.map

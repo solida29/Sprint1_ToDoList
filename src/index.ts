@@ -95,9 +95,13 @@ function completedTask(oldTask: string) {
 // Imprimir tareas
 function printTask() {
     let show = "";
+    //show = JSON.stringify(taskList.task);
+
+    //const {task, completed} = taskList;
+    //console.log(task);
 
     for (let i: number = 0; i < taskList.length; i++) {
-        show += (i + 1) + ". " + taskList[i].task + "\n";
+        show +=  taskList[i].task + "\n";
     }
     return show;
 }
@@ -107,3 +111,4 @@ exports.add = addTask;
 exports.list = taskList;
 exports.deleteT = deleteTask;
 exports.completedT = completedTask;
+exports.printT = printTask;

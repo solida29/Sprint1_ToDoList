@@ -3,6 +3,7 @@ const { add } = require('../dist/index');
 const { list } = require('../dist/index');
 const { deleteT } = require('../dist/index');
 const { completedT } = require('../dist/index');
+const { printT } = require('../dist/index');
 
 
 test('buscar posicion en el array', () => {
@@ -36,4 +37,8 @@ test('completar tarea', () => {
 
 test('completar tarea', () => {
   expect(completedT('preparar la cena')).toBe("Sorry, this task doesn't exists or is completed");
+});
+
+test('imprimir todas las tareas', () => {
+  expect(printT()).toEqual(list.list);
 });
