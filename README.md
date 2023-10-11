@@ -48,7 +48,7 @@ TDD: El primer y segundo test del todolist.test.js (respectivament linea 9 y 13)
 
 - La segunda función addTask permite añadir tareas nuevas si no existen.
     - Primero llama a searchingTask para saber si la tarea para agregar exite o no.
-    - Si no existe (index === -1), sube la tarea en taskList[], con completed en false por defecto. También devuelve "Task added successfully".
+    - Si no existe (index === -1), sube la tarea en taskList[], con completed en false por defecto. También devuelve "Task added successfully". <br>
     TDD: test linea 17 (miramos si el último objeto del array coincide con la nueva tarea añadida) y test linea 22 (comprobamos hay una tarea más midiendo el tamaño del array)
     - Si existe (es decir con index >=0), devuelve "Sorry but this task exists".
 
