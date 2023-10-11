@@ -29,7 +29,7 @@ Para la realización del programa, el ecosistema es:
 - Test: Jest para JS
 
 ### Nivel 1
-El <b><em>To Do List</em></b> es un programa que permite almacenar tareas.
+La <b><em>To Do List</em></b> es un programa que permite almacenar tareas.
 Se ha implementado con TDD con Jest.
 El archivo de test se llama todolist.test.js (en la carpeta test).
 
@@ -59,7 +59,7 @@ TDD: linea 40 (completamos una tarea existente), 44 (intentamos completar un tar
 - La cuarta función <b><em>printTask</em></b> nos permite imprimir las tareas con un bucle for.<br>
 TDD: linea 103
 
-- <b>GitHub Actions:<b> ./.github/workflows/main.yml <br>
+- <b>GitHub Actions:</b> ./.github/workflows/main.yml <br>
     - las acciones están en la rama <em>main</em>
     - la versión de Node usada es la "20.5"
     - los jobs son el <em>Checkout</em>, instalar el entorno de Node, instalar las dependencias con <em>npm install</em> y poner en marcha los tests de Jest con <em>npm run test</em>.
