@@ -56,7 +56,12 @@ TDD: El primer y segundo test del todolist.test.js (respectivament linea 9 y 13)
 Antes de completar la tarea, se comprueba que la tarea que queremos completar existe o no, con la función <em>searchingTask().</em> <br>
 TDD: linea 40 (completamos una tarea existente), 44 (intentamos completar un tarea que no existe, el programa nos devuelve <em>"Sorry, this task doesn't exists or is completed"</em>) y 48 (intentamos completar una tarea ya completada, el porgrama nos devuelve <em>"Sorry, this task doesn't exists or is completed"</em>).
 
-- La cuarta función printTask nos permite 
+- La cuarta función <em>printTask</em> nos permite imprimir las tareas con un bucle for.<br>
+TDD: linea 103
 
+- GitHub Actions: ./.github/workflows/main.yml <br>
+    - las acciones están en la rama <em>main</em>
+    - la versión de Node usada es la "20.5"
+    - los jobs son el <em>Checkout</em>, instalar el entorno de Node, instalar las dependencias con <em>npm install</em> y poner en marcha los tests de Jest con <em>npm run test</em>.
 
-
+Gracias por la lectura
