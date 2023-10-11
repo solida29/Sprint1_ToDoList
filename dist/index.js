@@ -69,13 +69,12 @@ function completedTask(oldTask) {
     console.table(taskList);
 }
 function printTask(taskList) {
-    let show = "";
     for (let i = 0; i < taskList.length; i++) {
         const { task } = taskList[i];
-        show += task + "\n";
+        console.log(task);
     }
-    return show;
 }
+printTask(taskList);
 exports.searching = searchingTask;
 exports.add = addTask;
 exports.list = taskList;

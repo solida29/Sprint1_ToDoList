@@ -50,6 +50,5 @@ test('completar tarea', () => {
 });
 
 test('imprimir todas las tareas', () => {
-  printT(list);
-  expect().toBe(list.list);
+  expect(printT(list)).toBe(list.list);
 });

@@ -40,7 +40,7 @@ function searchingTask(newTask: string) : number {
 }
 
 // Agregar tareas
-function addTask(newTask: string) {
+function addTask(newTask: string) : string {
     let taskIndex = searchingTask(newTask.toLowerCase());
 
     if (taskIndex === -1) {
@@ -94,16 +94,13 @@ function completedTask(oldTask: string) {
 
 // Imprimir tareas
 function printTask(taskList: ITask[]) {
-    let show = "";
 
     for (let i: number = 0; i < taskList.length; i++) {
         const {task} = taskList[i];
-        show += task + "\n";
-
-        console.log(show);
+        console.log(task)
     }
-    return show;
 }
+printTask(taskList)
 
 exports.searching = searchingTask;
 exports.add = addTask;
