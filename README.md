@@ -28,6 +28,8 @@ Para la realización del programa, el ecosistema es:
 - NPM
 - Test: Jest para JS
 
+<hr>
+
 ### Nivel 1
 La <b><em>To Do List</em></b> es un programa que permite almacenar tareas.
 Se ha implementado con TDD con Jest.
