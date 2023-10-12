@@ -36,7 +36,7 @@ const taskList: ITask[] = [
 }
 
 function addTask() {
-    //const prompt = require('prompt-sync')();
+    const prompt = require('prompt-sync')();
     let newTask = (prompt("Put the new task please")).toLowerCase();
     let taskIndex = searchingTask(newTask);
 
@@ -56,7 +56,7 @@ function addTask() {
 }
 
 function deleteTask() {
-    //const prompt = require('prompt-sync')();
+    const prompt = require('prompt-sync')();
     let oldTask = prompt("Which task do you want to delete please?");
     let taskIndex = searchingTask(oldTask);
 
@@ -73,7 +73,7 @@ function deleteTask() {
 }
 
 function completedTask() {
-    //const prompt = require('prompt-sync')();
+    const prompt = require('prompt-sync')();
     let oldTask = prompt("Which task do you want to complete please?");
     let taskIndex = searchingTask(oldTask);
 

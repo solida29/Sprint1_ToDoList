@@ -28,6 +28,7 @@ function searchingTask(newTask) {
     return index;
 }
 function addTask() {
+    const prompt = require('prompt-sync')();
     let newTask = (prompt("Put the new task please")).toLowerCase();
     let taskIndex = searchingTask(newTask);
     if (taskIndex === -1) {
@@ -44,6 +45,7 @@ function addTask() {
     console.table(taskList);
 }
 function deleteTask() {
+    const prompt = require('prompt-sync')();
     let oldTask = prompt("Which task do you want to delete please?");
     let taskIndex = searchingTask(oldTask);
     console.log("task index: " + taskIndex);
@@ -57,6 +59,7 @@ function deleteTask() {
     console.table(taskList);
 }
 function completedTask() {
+    const prompt = require('prompt-sync')();
     let oldTask = prompt("Which task do you want to complete please?");
     let taskIndex = searchingTask(oldTask);
     console.log("task index: " + taskIndex);
