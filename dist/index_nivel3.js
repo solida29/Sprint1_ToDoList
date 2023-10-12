@@ -78,6 +78,7 @@ function printTask() {
     for (let i = 0; i < taskList.length; i++) {
         show += (i + 1) + ". " + taskList[i].task + "<br>";
     }
-    document.getElementById('result').innerHTML = show;
+    let read = document.getElementById('result');
+    read.innerHTML = show;
 }
 //# sourceMappingURL=index_nivel3.js.map

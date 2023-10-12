@@ -97,5 +97,6 @@ function printTask() {
         show += (i + 1) + ". " + taskList[i].task + "<br>";
     }
 
-    document.getElementById('result').innerHTML = show;
+    let read = <HTMLElement>document.getElementById('result');
+    read.innerHTML = show;
 }
