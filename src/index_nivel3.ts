@@ -36,57 +36,69 @@ const taskList: ITask[] = [
 }
 
 function addTask() {
-    const prompt = require('prompt-sync')();
-    let newTask = (prompt("Put the new task please")).toLowerCase();
-    let taskIndex = searchingTask(newTask);
+    let newTask = window.prompt("Put the new task please");
+    let taskIndex: number;
+    
+    if (newTask !== null) {
+        taskIndex = searchingTask(newTask);
+        console.log("task index: " + taskIndex);
 
-    if (taskIndex === -1) {
-        const addNewTask = 
-            {
-            task: newTask,
-            completed: false
-            }
-        
-        taskList.push(addNewTask);
-        alert("Task added successfully");
+        if (taskIndex === -1) {
+            const addNewTask = 
+                {
+                task: newTask,
+                completed: false
+                }
+            
+            taskList.push(addNewTask);
+            alert("Task added successfully");
+        } else {
+            alert("Sorry but this task exists");
+        }
     } else {
-        alert("Sorry but this task exists");
-    }
+        alert("There is any task");
+    } 
     console.table(taskList);
 }
 
 function deleteTask() {
-    const prompt = require('prompt-sync')();
-    let oldTask = prompt("Which task do you want to delete please?");
-    let taskIndex = searchingTask(oldTask);
+    let oldTask: string | null = window.prompt("Which task do you want to delete please?");
+    let taskIndex: number;
+        if (oldTask !== null) {
+           taskIndex = searchingTask(oldTask);
+           console.log("task index: " + taskIndex);
 
-    console.log("task index: " + taskIndex);
-
-    if (taskIndex >= 0) {
-        taskList.splice(taskIndex, 1);
-        alert("Task deleted");
-
-    } else {
-        alert("Sorry, this task doesn't exists");
-    }
+            if (taskIndex >= 0) {
+                taskList.splice(taskIndex, 1);
+                alert("Task deleted");
+            } else if (taskIndex === -1) {
+                alert("Sorry, this task doesn't exists");
+            }
+        } else {
+            alert("There is any task");
+        } 
+    
     console.table(taskList);
 }
 
 function completedTask() {
-    const prompt = require('prompt-sync')();
-    let oldTask = prompt("Which task do you want to complete please?");
-    let taskIndex = searchingTask(oldTask);
+    let oldTask = window.prompt("Which task do you want to complete please?");
+    let taskIndex: number;
+        if (oldTask !== null) {
+           taskIndex = searchingTask(oldTask);
 
-    console.log("task index: " + taskIndex);
+            if (taskIndex >= 0 && !taskList[taskIndex].completed) {
+                taskList[taskIndex].task += ": done";
+                taskList[taskIndex].completed = true;
+                alert("Task completed");
+            } else {
+                alert("Sorry, this task doesn't exists or is completed");
+            }
+            console.log("task index: " + taskIndex);
 
-    if (taskIndex >= 0 && !taskList[taskIndex].completed) {
-        taskList[taskIndex].task += ": done";
-        taskList[taskIndex].completed = true;
-        alert("Task completed");
-
-    } else {
-        alert("Sorry, this task doesn't exists or is completed");
-    }
+        } else {
+            alert("There is any task");
+        }
     console.table(taskList);
 }
 
@@ -98,5 +110,5 @@ function printTask() {
     }
 
     let read = <HTMLElement>document.getElementById('result');
-    read.innerHTML = show;
+    read.innerHTML = show;  
 }
