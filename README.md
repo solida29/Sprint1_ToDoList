@@ -89,9 +89,9 @@ El front-end viene con 4 botones para las diferentes funciones <em>Add task (fun
 
 La estructura del programa viene también con un array de objeto ya existente con 3 tareas por defecto.
 
-Existe también la función searchingTask para saber el indice de la tarea en dicho array o si la tarea no exite.
+Existe también la función <em>searchingTask</em> para saber el indice de la tarea en dicho array o si la tarea no exite.
 
 Para recoger los inputs del usuario, el programa usa un prompt.
-Todo funciona como en el nivel 1 a parte pero con una interface de usauario en un navegador.
+Todo funciona como en el nivel 1 pero con una interface de usauario en un navegador.
 
 Gracias por la lectura
