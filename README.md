@@ -83,15 +83,15 @@ El nivel 3 es el programa con un front-end sin CSS.
 Los archivos son:
 - index.html (hay qua abrirlo en el navegador para que funcione el programa)
 - index_nivel3.ts (./src/index_nivel3.ts)
-- index_nivel3.js (./dist/index_nivel3.js). Es el archivo transplidao de index_nivel3.ts y que está vinculado al html
+- index_nivel3.js (./dist/index_nivel3.js). Es el archivo transplilado de index_nivel3.ts y que está vinculado al html
 
-El front-end viene con 4 botones para las diferentes funciones <em>Add task (function addTask()), Delete task (function deleteTask()), Completed task (completedTask())</em> y <em>Read task (function printTask()).</em>
+El front-end viene con 4 botones para las diferentes funciones <b><em>Add task (function addTask()), Delete task (function deleteTask()), Completed task (completedTask())</em></b> y <b><em>Read task (function printTask()).</em></b>
 
 La estructura del programa viene también con un array de objeto ya existente con 3 tareas por defecto.
 
-Existe también la función <em>searchingTask</em> para saber el indice de la tarea en dicho array o si la tarea no exite.
+Existe también la función <b><em>searchingTask</em></b> para saber el indice de la tarea en dicho array o si la tarea no exite.
 
-Para recoger los inputs del usuario, el programa usa un prompt.
-Todo funciona como en el nivel 1 pero con una interface de usauario en un navegador.
+Para recoger los inputs del usuario, el programa usa un <em>prompt</em>.
+Todo funciona como en el nivel 1, pero con una interfaz básica en un navegador.
 
 Gracias por la lectura
