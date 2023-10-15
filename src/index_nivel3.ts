@@ -106,7 +106,7 @@ function printTask() {
     let show = "";
 
     for (let i = 0; i < taskList.length; i++) {
-        show += (i + 1) + ". " + taskList[i].task + "<br>";
+        show += taskList[i].task + "<br>";
     }
 
     let read = <HTMLElement>document.getElementById('result');
