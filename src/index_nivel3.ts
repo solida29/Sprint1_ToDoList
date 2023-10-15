@@ -84,7 +84,7 @@ function deleteTask() {
 }
 
 function completedTask() {
-    let oldTask = window.prompt("Which task do you want to complete please?", "Write here the task you want to delete");
+    let oldTask = window.prompt("Which task do you want to complete please?");
     let taskIndex: number;
 
     if (oldTask !== null) {

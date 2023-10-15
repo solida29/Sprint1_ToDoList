@@ -70,7 +70,7 @@ function deleteTask() {
     console.table(taskList);
 }
 function completedTask() {
-    let oldTask = window.prompt("Which task do you want to complete please?", "Write here the task you want to delete");
+    let oldTask = window.prompt("Which task do you want to complete please?");
     let taskIndex;
     if (oldTask !== null) {
         taskIndex = searchingTask(oldTask);
