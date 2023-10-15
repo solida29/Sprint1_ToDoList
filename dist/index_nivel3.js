@@ -51,7 +51,7 @@ function addTask() {
     console.table(taskList);
 }
 function deleteTask() {
-    let oldTask = window.prompt("Which task do you want to delete please?");
+    let oldTask = window.prompt("Which task do you want to delete please?", "Write in full the task you want to delete");
     let taskIndex;
     if (oldTask !== null) {
         taskIndex = searchingTask(oldTask);
@@ -70,7 +70,7 @@ function deleteTask() {
     console.table(taskList);
 }
 function completedTask() {
-    let oldTask = window.prompt("Which task do you want to complete please?", "poner la lavadora");
+    let oldTask = window.prompt("Which task do you want to complete please?", "Write here the task you want to delete");
     let taskIndex;
     if (oldTask !== null) {
         taskIndex = searchingTask(oldTask);

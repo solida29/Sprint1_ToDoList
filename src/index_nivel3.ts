@@ -62,8 +62,10 @@ function addTask() {
 }
 
 function deleteTask() {
-    let oldTask: string | null = window.prompt("Which task do you want to delete please?");
+    let oldTask: string | null = window.prompt("Which task do you want to delete please?", 
+    "Write in full the task you want to delete");
     let taskIndex: number;
+
         if (oldTask !== null) {
            taskIndex = searchingTask(oldTask);
            console.log("task index: " + taskIndex);
@@ -82,23 +84,24 @@ function deleteTask() {
 }
 
 function completedTask() {
-    let oldTask = window.prompt("Which task do you want to complete please?", "poner la lavadora");
+    let oldTask = window.prompt("Which task do you want to complete please?", "Write here the task you want to delete");
     let taskIndex: number;
-        if (oldTask !== null) {
-           taskIndex = searchingTask(oldTask);
 
-            if (taskIndex >= 0 && !taskList[taskIndex].completed) {
-                taskList[taskIndex].task += ": done";
-                taskList[taskIndex].completed = true;
-                alert("Task completed");
-            } else {
-                alert("Sorry, this task doesn't exists or is completed");
-            }
-            console.log("task index: " + taskIndex);
+    if (oldTask !== null) {
+        taskIndex = searchingTask(oldTask);
 
+        if (taskIndex >= 0 && !taskList[taskIndex].completed) {
+            taskList[taskIndex].task += ": done";
+            taskList[taskIndex].completed = true;
+            alert("Task completed");
         } else {
-            alert("There is any task");
+            alert("Sorry, this task doesn't exists or is completed");
         }
+        console.log("task index: " + taskIndex);
+
+    } else {
+        alert("There is any task");
+    }
     console.table(taskList);
 }
 
